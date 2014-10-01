@@ -1,8 +1,8 @@
 # -*- coding: cp1252 -*-
 
 def val():
-    print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal, 8: Upphöjt till"
-    val = raw_input("Skriv nummer här: ")
+    print "VÃ¤lj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal, 8: UpphÃ¶jt till"
+    val = raw_input("Skriv nummer hÃ¤r: ")
     if val == "1":
         print "Du har valt addera"
         addera()
@@ -28,36 +28,36 @@ def val():
         
 
 def addera():
-    plus1 = int(raw_input("Skriv första siffran: "))
-    plus2 = int(raw_input("Skriv andra siffran: "))
+    plus1 = float(raw_input("Skriv fÃ¶rsta siffran: "))
+    plus2 = float(raw_input("Skriv andra siffran: "))
     svar = plus1 + plus2
-    print "Svaret är ", svar
+    print "Svaret: ", plus1,"+",plus2,"=",svar
 
 def subtrahera():
-    minus1 = int(raw_input("Skriv första siffran: "))
-    minus2 = int(raw_input("Skriv andra siffran: "))
+    minus1 = float(raw_input("Skriv fÃ¶rsta siffran: "))
+    minus2 = float(raw_input("Skriv andra siffran: "))
     svar = minus1 - minus2
-    print "Svaret är ", svar
+    print "Svaret: ", minus1,"-",minus2,"=",svar
 
 def multiplicera():
-    ggr1 = int(raw_input("Skriv första siffran: "))
-    ggr2 = int(raw_input("Skriv andra siffran: "))
+    ggr1 = float(raw_input("Skriv fÃ¶rsta siffran: "))
+    ggr2 = float(raw_input("Skriv andra siffran: "))
     svar = ggr1 * ggr2
-    print "Svaret är ", svar
+    print "Svaret: ", ggr1,"x",ggr2,"=",svar
 
 def dividera():
-    dvd1 = int(raw_input("Skriv första siffran: "))
-    dvd2 = int(raw_input("Skriv andra siffran: "))
+    dvd1 = float(raw_input("Skriv fÃ¶rsta siffran: "))
+    dvd2 = float(raw_input("Skriv andra siffran: "))
     if dvd2 == 0:
         print "Error divide by 0"
     else:
         svar = dvd1 / dvd2
-        print "Svaret är ", svar
+        print "Svaret: ", dvd1,"/",dvd2,"=",svar
 
 def medeltal():
     talarray = eval(raw_input("Skriv en array ex. [1, 2, 3, 4]"))
     svar = float (sum(talarray))/float(len(talarray))
-    print "Medeltalet är ", svar
+    print "Medeltalet Ã¤r ", svar
 
 def median():
     talmedian = eval(raw_input("Skriv en array ex, [1, 2, 3, 4]"))
@@ -76,17 +76,20 @@ def median():
 def summafler():
     summafler = eval(raw_input("Skriv de tal du vill addera som en array ex. [5, 10, 15]"))
     svar = float (sum(summafler))
-    print "Svaret är ", svar
+    print "Svaret Ã¤r ", svar
 
 def upphojt():
-    upp1 = int(raw_input("Skriv basen: "))
-    upp2 = int(raw_input("Skriv vad du vill höja upp den till: "))
-    elif upp2 == 0:
+    grund1 = int(raw_input("Skriv basen: "))
+    grund2 = 1
+    power = int(raw_input("Skriv vad du vill hÃ¶ja upp den till: "))
+    elif power == 0:
         print 1
-    elif upp2 == 1:
-        print upp1
-    elif upp2 > 1
-    svar = upp1 * 
-    print "Svaret är ", svar
+    
+    x=1
+    if grund2>0:
+        while x<=power:
+         grund2 = grund1*grund2
+         x=x+1
+    print "Svaret Ã¤r ", grund2
 
 val()
