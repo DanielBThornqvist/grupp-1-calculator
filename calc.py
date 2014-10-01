@@ -81,8 +81,8 @@ def summafler():
 def upphojt():
     grund1 = int(raw_input("Skriv basen: "))
     grund2 = 1
-    power = int(raw_input("Skriv vad du vill höja upp den till: "))
-    elif power == 0:
+    power = int(raw_input("Skriv vad du vill höja upp den till (Bara positva tal som gäller ^^): "))
+    if power == 0:
         print 1
     
     x=1
