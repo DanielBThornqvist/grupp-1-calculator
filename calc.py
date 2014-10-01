@@ -81,7 +81,12 @@ def summafler():
 def upphojt():
     upp1 = int(raw_input("Skriv basen: "))
     upp2 = int(raw_input("Skriv vad du vill höja upp den till: "))
-    svar = pow(upp1, upp2)
+    elif upp2 == 0:
+        print 1
+    elif upp2 == 1:
+        print upp1
+    elif upp2 > 1
+    svar = upp1 * 
     print "Svaret är ", svar
 
 val()
