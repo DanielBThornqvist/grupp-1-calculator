@@ -23,6 +23,10 @@ def val():
         summafler()
     elif val == "8":
         upphojt()
+    elif val == "9":
+        upphojt2()
+    elif val == "10":
+        upphojt3()
     else:
         print "Error"
         
@@ -91,5 +95,20 @@ def upphojt():
          grund2 = grund1*grund2
          x=x+1
     print "Svaret Ã¤r ", grund2
-
+####################################
+#Gjorde lite på bussen
+def upphojt2():
+    bas = int(raw_input("Skriv basen: "))
+    power = int(raw_input("Upphöjt till: "))
+    svar = 1
+    for test  in range(1,power+1):
+        svar = bas*svar
+    print svar
+###Sen fick jag reda på att ** = ^.. sigh.....l.###
+def upphojt3():
+    bas = int(raw_input("Skriv basen: "))
+    power = int(raw_input("Upphöjt till: "))
+    svar = bas**power
+    print svar
+#####################################
 val()
