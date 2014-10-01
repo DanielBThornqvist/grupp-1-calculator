@@ -1,7 +1,7 @@
 # -*- coding: cp1252 -*-
 
 def val():
-    print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal"
+    print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median"
     val = raw_input("Skriv nummer här: ")
     if val == "1":
         print "Du har valt addera"
@@ -17,6 +17,8 @@ def val():
         dividera()
     elif val == "5":
         medeltal()
+    elif val == "6":
+        median()
     else:
         print "Error"
         
@@ -49,5 +51,19 @@ def medeltal():
     talarray = eval(raw_input("Skriv en array ex. [1, 2, 3, 4]"))
     svar = float (sum(talarray))/float(len(talarray))
     print "Medeltalet är ", svar
+
+def median():
+    talmedian = eval(raw_input("Skriv en array ex, [1, 2, 3, 4]"))
+    sortera = sorted(talmedian)
+    if len(sortera)%2 == 0:
+        for i in sortera:
+            if i > (len(sortera)/2):
+                svar = float(i - 1)
+                print svar
+    else:
+        for i in sortera:
+            if i > (len(sortera)/2):
+                svar = float(((i + (i - 1)) / 2))
+                print svar
         
 val()
