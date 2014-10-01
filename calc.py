@@ -1,7 +1,7 @@
 # -*- coding: cp1252 -*-
 
 def val():
-    print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal"
+    print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal, 8: Upphöjt till"
     val = raw_input("Skriv nummer här: ")
     if val == "1":
         print "Du har valt addera"
@@ -21,6 +21,8 @@ def val():
         median()
     elif val == "7":
         summafler()
+    elif val == "8":
+        upphojt()
     else:
         print "Error"
         
@@ -46,8 +48,11 @@ def multiplicera():
 def dividera():
     dvd1 = int(raw_input("Skriv första siffran: "))
     dvd2 = int(raw_input("Skriv andra siffran: "))
-    svar = dvd1 / dvd2
-    print "Svaret är ", svar
+    if dvd2 == 0:
+        print "Error divide by 0"
+    else:
+        svar = dvd1 / dvd2
+        print "Svaret är ", svar
 
 def medeltal():
     talarray = eval(raw_input("Skriv en array ex. [1, 2, 3, 4]"))
@@ -71,6 +76,12 @@ def median():
 def summafler():
     summafler = eval(raw_input("Skriv de tal du vill addera som en array ex. [5, 10, 15]"))
     svar = float (sum(summafler))
+    print "Svaret är ", svar
+
+def upphojt():
+    upp1 = int(raw_input("Skriv basen: "))
+    upp2 = int(raw_input("Skriv vad du vill höja upp den till: "))
+    svar = pow(upp1, upp2)
     print "Svaret är ", svar
 
 val()
