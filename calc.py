@@ -1,9 +1,8 @@
 # -*- coding: cp1252 -*-
 
-a = None
+a = True
 
-
-while a == True:
+while a:
 
     def val():
         print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal, 8: Upphöjt till"
@@ -33,13 +32,14 @@ while a == True:
 
     def fortsatt():
         svar = raw_input("Vill du fortsätta? (Y/N): ")
-        if svar == "Y":
+        if svar.lower() == "y":
             a = True
-        elif svar == "N":
-            a = False
+        elif svar.lower() == "n":
+            exit()
         else:
             print "Fel input"
             fortsatt()
+        
 
     def addera():
         plus1 = int(raw_input("Skriv första siffran: "))
