@@ -5,7 +5,8 @@ a = True
 while a:
 
     def val():
-        print "Välj om du vill 1: Addera, 2: Subtrahera, 3: Multiplicera, 4: Dividera , 5:Medeltal, 6: Median, 7: Summera flera tal, 8: Upphöjt till"
+        print "Välj om du vill\n1: Addera\n2: Subtrahera\n3: Multiplicera\n\
+4: Dividera\n5: Medeltal\n6: Median\n7: Summera flera tal\n8: Upphöjt till\n"
         val = raw_input("Skriv nummer här: ")
         if val == "1":
             print "Du har valt addera"
@@ -42,35 +43,35 @@ while a:
         
 
     def addera():
-        plus1 = int(raw_input("Skriv första siffran: "))
-        plus2 = int(raw_input("Skriv andra siffran: "))
+        plus1 = float(raw_input("Skriv första siffran: "))
+        plus2 = float(raw_input("Skriv andra siffran: "))
         svar = plus1 + plus2
-        print "Svaret är ", svar
+        print "Svaret: ",plus1,"+",plus2,"=",svar
         fortsatt()
-
+        
     def subtrahera():
-        minus1 = int(raw_input("Skriv första siffran: "))
-        minus2 = int(raw_input("Skriv andra siffran: "))
+        minus1 = float(raw_input("Skriv första siffran: "))
+        minus2 = float(raw_input("Skriv andra siffran: "))
         svar = minus1 - minus2
-        print "Svaret är ", svar
+        print "Svaret: ",minus1,"-",minus2,"=",svar
         fortsatt()
-
+        
     def multiplicera():
-        ggr1 = int(raw_input("Skriv första siffran: "))
-        ggr2 = int(raw_input("Skriv andra siffran: "))
+        ggr1 = float(raw_input("Skriv första siffran: "))
+        ggr2 = float(raw_input("Skriv andra siffran: "))
         svar = ggr1 * ggr2
-        print "Svaret är ", svar
+        print "Svaret: ",ggr1,"x",ggr2,"=",svar
         fortsatt()
-
+        
     def dividera():
-        dvd1 = int(raw_input("Skriv första siffran: "))
-        dvd2 = int(raw_input("Skriv andra siffran: "))
+        dvd1 = float(raw_input("Skriv första siffran: "))
+        dvd2 = float(raw_input("Skriv andra siffran: "))
         if dvd2 == 0:
             print "Error divide by 0"
             fortsatt()
         else:
             svar = dvd1 / dvd2
-            print "Svaret är ", svar
+            print "Svaret: ",dvd1,"/",dvd2,"=",svar
             fortsatt()
 
     def medeltal():
@@ -99,5 +100,18 @@ while a:
         print "Svaret är ", svar
         fortsatt()
 
+    def upphojt():
+        grund1 = int(raw_input("Skriv basen: "))
+        grund2 = 1
+        power = int(raw_input("Skriv vad du vill höja upp den till (Bara naturella tal som gäller ^^): "))
+        if power == 0:
+            print 1
+        x=1
+        if grund2>0:
+            while x<=power:
+                grund2 = grund1*grund2
+                x=x+1
+        print "Svaret är ", grund2
+        fortsatt()
 
     val()
