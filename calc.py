@@ -1,5 +1,7 @@
 # -*- coding: cp1252 -*-
 
+import os
+
 a = True
 
 while a:
@@ -35,6 +37,7 @@ while a:
         svar = raw_input("Vill du fortsätta? (Y/N): ")
         if svar.lower() == "y":
             a = True
+            os.system("cls")
         elif svar.lower() == "n":
             exit()
         else:
