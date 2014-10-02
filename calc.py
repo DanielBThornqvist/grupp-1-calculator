@@ -5,7 +5,7 @@ a = True
 while a:
 
     def val():
-        print "Välj om du vill 1: Addera\n2: Subtrahera\n3: Multiplicera\n\
+        print "Välj om du vill\n1: Addera\n2: Subtrahera\n3: Multiplicera\n\
 4: Dividera\n5: Medeltal\n6: Median\n7: Summera flera tal\n8: Upphöjt till\n"
         val = raw_input("Skriv nummer här: ")
         if val == "1":
